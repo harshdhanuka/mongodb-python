@@ -1,11 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""
-Created on Tue Apr 21 15:57:10 2020
 
-@author: harshdhanuka
-"""
-# %%
 
 from pymongo import MongoClient
 import pprint
@@ -16,7 +11,7 @@ client = MongoClient('mongodb://localhost:27017/')
 db = client.virtual_library2
 
 
-# %%
+############################################
 
 
 # 1. Create 'eBooks' collection
@@ -44,7 +39,7 @@ books_array = [
 eBooks = db.eBooks.insert_many(books_array)
 
 
-# %%
+############################################
 
 
 # 2. Create 'user_info' collection
@@ -74,7 +69,7 @@ users_array = [
 user_info = db.user_info.insert_many(users_array)
 
 
-# %%
+############################################
 
 
 # 3. Create 'checkout_info' collection
@@ -127,7 +122,7 @@ checkout_info = db.checkout_info.insert_many(checkout_array)
 
 
 
-# %%
+############################################
 
 
 
@@ -149,7 +144,7 @@ for title in titles:
 #    pprint.pprint(book)
 
 
-# %%
+############################################
 
 
 # Question 2:
@@ -174,7 +169,7 @@ for names in title3:
 #    pprint.pprint(names)
 
 
-# %%
+############################################
 
 
 # Question 3:
@@ -197,7 +192,7 @@ eBooks.count_documents({"Key_Topics": "Machine Learning"})
 # print(db.eBooks.count_documents({"Genre_of_Book":"Fiction"}))
 
 
-# %%
+############################################
 
 
 # Question 4:
@@ -222,7 +217,7 @@ for names in names:
 #    pprint.pprint(names)
 
 
-# %%
+############################################
 
 
 # Question 5:
@@ -248,7 +243,7 @@ for comments in comments:
 #    pprint.pprint(comments)
 
 
-# %%
+############################################
 
 
 # Question 6: 
@@ -270,3 +265,6 @@ for comments in comments:
 #                                      {"Title": "The  Alchemist"}]}):
 #    pprint.pprint(comment)
 
+
+
+############################################   T H E  E N D   ############################################
